@@ -1,0 +1,295 @@
+:root {
+  font-size: 62.5%;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  vertical-align: baseline;
+  -webkit-vertical-align: baseline;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.header__navigation {
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__navigation-left .for-mobile {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.header__navigation-left .hamburger {
+  position: relative;
+  height: 4px;
+  background-color: #333;
+  width: 2.5rem;
+}
+.header__navigation-left .hamburger::before {
+  content: "";
+  position: absolute;
+  top: 0.8rem;
+  height: 4px;
+  background-color: #333;
+  width: 2.5rem;
+}
+.header__navigation-left .hamburger::after {
+  content: "";
+  position: absolute;
+  top: -0.8rem;
+  height: 4px;
+  background-color: #333;
+  width: 2.5rem;
+}
+.header__navigation-left ul {
+  display: none;
+}
+.header__navigation-right {
+  display: flex;
+  gap: 2rem;
+}
+.header__navigation-right img {
+  width: 2.5rem;
+}
+
+.header img {
+  transition: all 0.3s ease-in-out;
+}
+.header__arrows {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+  transition: all 0.3s ease-in-out;
+}
+.header__left-arrow {
+  border-radius: 100vw;
+  background-color: #333;
+  height: 4.5rem;
+  width: 4.5rem;
+  background-color: #fff;
+  position: absolute;
+  top: 23rem;
+  left: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.header__left-arrow::after {
+  content: "<";
+  height: 100%;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+.header__right-arrow {
+  border-radius: 100vw;
+  background-color: #fff;
+  height: 4.5rem;
+  width: 4.5rem;
+  position: absolute;
+  top: 23rem;
+  right: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.header__right-arrow::after {
+  content: ">";
+  height: 100%;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.main {
+  padding: 2rem 3rem;
+}
+.main .article P {
+  font-size: 1.5rem;
+  color: hsl(219deg, 9%, 45%);
+  font-weight: 400;
+}
+.main .article .p1 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: hsl(26deg, 100%, 55%);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+.main .article .p2 {
+  line-height: 1.6;
+  margin-bottom: 2.3rem;
+}
+.main .article h2 {
+  color: hsl(220deg, 13%, 13%);
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.main .article__prices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+.main .article__prices-left {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+.main .article__prices-left .main-price {
+  font-size: 3rem;
+  color: hsl(220deg, 13%, 13%);
+  font-weight: 700;
+}
+.main .article__prices-left .discount-price {
+  background-color: hsl(25deg, 100%, 94%);
+  color: hsl(26deg, 100%, 55%);
+  font-weight: 700;
+  padding: 0.4rem 1.2rem;
+  border-radius: 5px;
+}
+.main .article__prices-right .strikethrough-price {
+  color: hsl(220deg, 14%, 75%);
+  font-weight: 700;
+  text-decoration: line-through;
+}
+.main .article__input {
+  position: relative;
+}
+.main .article__input img:nth-child(1) {
+  position: absolute;
+  bottom: 2.8rem;
+  left: 2rem;
+}
+.main .article__input img:nth-child(2) {
+  position: absolute;
+  bottom: 2.3rem;
+  right: 2rem;
+}
+.main .article__input-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .article__input input {
+  margin-top: 2rem;
+  width: 100%;
+  background-color: hsl(223deg, 64%, 98%);
+  border: 0;
+  padding: 1.9rem;
+  border-radius: 8px;
+}
+.main .article__input ::-moz-placeholder {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(220deg, 13%, 13%);
+  text-align: center;
+}
+.main .article__input :-ms-input-placeholder {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(220deg, 13%, 13%);
+  text-align: center;
+}
+.main .article__input ::placeholder {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(220deg, 13%, 13%);
+  text-align: center;
+}
+.main .article__cta button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  border: 0;
+  width: 100%;
+  margin-top: 2rem;
+  background-color: hsl(26deg, 100%, 55%);
+  color: #fff;
+  padding: 1.5rem 3rem;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 8rem;
+}
+.main .article__cta button svg {
+  filter: brightness(0) invert(1);
+}/*# sourceMappingURL=style.css.map */
